@@ -1,16 +1,17 @@
-//  kilometerToMeter
+
+//-----------------  kilometerToMeter
 
 function kilometerToMeter(kilometer){
     var meter = kilometer / 0.001; // 1meter = 0.001 kilometer
     
     if ( kilometer < 0){
-        return "length cant'b negitive";
+        return "length can't be negitive";
     }
 return meter;
 }
 
 
-//  budgetCalculator--
+//-----------------  budgetCalculator
 
 function budgetCalculator(watch, mobile, laptop) {
     var watchPrice = watch * 50;     //Watch price is 50$
@@ -18,48 +19,47 @@ function budgetCalculator(watch, mobile, laptop) {
     var laptopPrice = laptop * 500;  //laptop price is 500$
 
     if (watch <0 ){
-        return 0;
+        return "item can not be zero or negitive";
     }
     if (mobile <0){
-        return 0;
+        return "item can not be zero or negitive";
     }
     if (laptop <0){
-        return 0;
+        return "item can not be zero or negitive";
     }
     var needBudget = watchPrice + mobilePrice + laptopPrice;
     return needBudget;
 }
 
 
-// hotelCost
+//----------------------- hotelCost
 
 function hotelCost(days) {
     var stay = 0;
 
-    if (days <=0){
+    if (days <=0){         
         return undefined;
 
     } if (days <=10){
-        stay = days * 100;
-
+        stay = days * 100;  
     } else if (days <=20){
-        var firstTenDays = 10 *100;
+        var firstTenDays = 10 *100;          // $100 for first 10 days of month
         var remaining = days - 10;
-        var secondTenDays = remaining * 80;
+        var secondTenDays = remaining * 80;  // $80 for second 10days of month
         stay = firstTenDays + secondTenDays;
 
     } else{
         var firstTenDays = 10 * 100;
         var secondTenDays = 10 * 80;
         var remaining = days - 20;
-        var remainingDays = remaining * 50;
+        var remainingDays = remaining * 50;   //$50 for rest of the days
         stay = firstTenDays + secondTenDays + remainingDays
     }
     return stay;
 }
 
 
-// megaFriend
+//------------- megaFriend
 
 function megaFriend(friends) {
     var mega = friends[0];
@@ -77,4 +77,3 @@ function megaFriend(friends) {
     }
     return mega;
 }
-
